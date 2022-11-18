@@ -7,7 +7,6 @@ The project aims to create a Bash a script to get information about chemical ele
 https://www.freecodecamp.org/learn/relational-database/build-a-periodic-table-database-project/build-a-periodic-table-database
 
 The project task are:
-Complete the tasks below
 
     You should rename the weight column to atomic_mass
 
