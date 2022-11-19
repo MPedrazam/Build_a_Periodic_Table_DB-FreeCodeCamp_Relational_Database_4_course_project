@@ -43,6 +43,3 @@ ALTER TABLE types(type_id, type)
 # 12. Each row in your properties table should have a type_id value that links to the correct type from the types table
 
 ALTER TABLE properties ADD COLUMN type_id INT NOT NULL FOREIGN KEY REFERENCES type(type_id);
-
-
-
