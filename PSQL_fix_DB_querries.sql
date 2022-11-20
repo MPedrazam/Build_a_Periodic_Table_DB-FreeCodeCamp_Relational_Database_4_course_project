@@ -47,3 +47,9 @@ UPDATE properties SET type_id = 1 WHERE type = 'nonmetal';
 UPDATE properties SET type_id = 2 WHERE type = 'metal';
 UPDATE properties SET type_id = 3 WHERE type = 'metalloid';
 ALTER TABLE properties ALTER COLUMN type_id SET NOT NULL;
+
+# 13. You should capitalize the first letter of all the symbol values in the elements table. Be careful to only capitalize the letter and not change any others
+
+UPDATE elements SET symbol = INITCAP(symbol);
+
+# 14. You should remove all the trailing zeros after the decimals from each row of the atomic_mass column. You may need to adjust a data type to DECIMAL for this. Be careful not to change the value
