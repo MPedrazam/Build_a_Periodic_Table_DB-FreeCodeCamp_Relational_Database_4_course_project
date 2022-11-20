@@ -43,3 +43,7 @@ INSERT INTO types(type_id, type)
 # 12. Each row in your properties table should have a type_id value that links to the correct type from the types table
 
 ALTER TABLE properties ADD COLUMN type_id INT REFERENCES types(type_id);
+UPDATE properties SET type_id = 1 WHERE type = 'nonmetal';
+UPDATE properties SET type_id = 2 WHERE type = 'metal';
+UPDATE properties SET type_id = 3 WHERE type = 'metalloid';
+ALTER TABLE properties ALTER COLUMN type_id SET NOT NULL;
