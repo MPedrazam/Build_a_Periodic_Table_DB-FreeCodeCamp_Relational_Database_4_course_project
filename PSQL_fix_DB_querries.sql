@@ -32,7 +32,7 @@ CREATE TABLE types (
     type_id INT PRIMARY KEY,
     type VARCHAR NOT NULL);
     
-ALTER TABLE types(type_id, type) 
+INSERT INTO types(type_id, type) 
   VALUES (
     1, 'nonmetal'), 
     (2, 'metal'), 
@@ -42,4 +42,4 @@ ALTER TABLE types(type_id, type)
 # 11. Your properties table should have a type_id foreign key column that references the type_id column from the types table. It should be an INT with the NOT NULL constraint
 # 12. Each row in your properties table should have a type_id value that links to the correct type from the types table
 
-ALTER TABLE properties ADD COLUMN type_id INT NOT NULL FOREIGN KEY REFERENCES type(type_id);
+ALTER TABLE properties ADD COLUMN type_id INT REFERENCES types(type_id);
