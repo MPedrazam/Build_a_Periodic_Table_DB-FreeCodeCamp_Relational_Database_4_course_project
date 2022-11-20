@@ -57,3 +57,14 @@ UPDATE elements SET symbol = INITCAP(symbol);
 # 14. You should remove all the trailing zeros after the decimals from each row of the atomic_mass column. You may need to adjust a data type to DECIMAL for this. Be careful not to change the value
 ALTER TABLE properties ALTER COLUMN atomic_mass TYPE DECIMAL;
 UPDATE properties SET atomic_mass = atomic_mass::REAL;
+
+
+# 15. You should add the element with atomic number 9 to your database. Its name is Fluorine, symbol is F, mass is 18.998, melting point is -220, boiling point is -188.1, and it's a nonmetal
+# 16. You should add the element with atomic number 10 to your database. Its name is Neon, symbol is Ne, mass is 20.18, melting point is -248.6, boiling point is -246.1, and it's a nonmetal
+INSERT INTO elements 
+        VALUES (9, 'F', 'Fluorine'),
+               (10, 'Ne', 'Neon');
+INSERT INTO properties 
+    VALUES (9, 'nonmetal', 18.998, -220, -188.1, 1),
+           (10, 'nonmetal', 20.18, -248.6, -246.1, 1);
+
