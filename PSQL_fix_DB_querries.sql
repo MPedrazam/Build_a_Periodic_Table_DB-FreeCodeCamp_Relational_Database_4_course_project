@@ -67,4 +67,14 @@ INSERT INTO elements
 INSERT INTO properties 
     VALUES (9, 'nonmetal', 18.998, -220, -188.1, 1),
            (10, 'nonmetal', 20.18, -248.6, -246.1, 1);
+       
+   
+# 17. You should delete the non existent element, whose atomic_number is 1000, from the two tables
+DELETE FROM propertiess WHERE atomic_number = 1000;
+DELETE FROM elements WHERE atomic_number = 1000;
+
+
+# 18. Your properties table should not have a type column
+ALTER TABLE properties DROP COLUMN type;
+
 
