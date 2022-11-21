@@ -4,9 +4,6 @@ PSQL="psql -X --username=freecodecamp --dbname=periodic_table --tuples-only -c"
 if [[ ! -z $1 ]]
   then
     ELEMENT_INPUT="$1"
-else 
-  echo "Please provide an element as an argument."
-  read ELEMENT_INPUT
 fi
 
 if [[ $ELEMENT_INPUT =~ (^[1-9]$|^10$) ]] # if values betwenn 1-10
@@ -58,5 +55,11 @@ then
 
 # if any creteria is meet.    
 else
-    echo -e "\nI could not find that element in the database."
+    if [[ -z $1 ]]
+    then
+      echo -e "\nPlease provide an element as an argument."
+      #read ELEMENT_INPUT
+    else
+      echo -e "\nI could not find that element in the database."
+    fi
 fi
