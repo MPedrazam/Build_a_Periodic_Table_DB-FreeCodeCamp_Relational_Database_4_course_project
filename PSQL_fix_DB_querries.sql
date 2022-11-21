@@ -70,7 +70,7 @@ INSERT INTO properties
        
    
 # 17. You should delete the non existent element, whose atomic_number is 1000, from the two tables
-DELETE FROM propertiess WHERE atomic_number = 1000;
+DELETE FROM properties WHERE atomic_number = 1000;
 DELETE FROM elements WHERE atomic_number = 1000;
 
 
